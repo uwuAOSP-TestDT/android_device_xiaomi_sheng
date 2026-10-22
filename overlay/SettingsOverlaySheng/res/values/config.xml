@@ -49,8 +49,6 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
-</resources>
-
     <!-- Whether sim related information is visible to the end user. -->
     <bool name="config_show_sim_info">false</bool>
 
@@ -63,3 +61,4 @@
 
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">false</bool>
+</resources>
