@@ -41,6 +41,10 @@ lib_fixups: lib_fixups_user_type = {
 sensor_simbol = b'_ZN13DisplayConfig10ClientImpl4InitENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEPNS_14ConfigCallbackE\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc': blob_fixup()
+        .regex_replace(r'(?m)^    onrestart restart touchfeature\n', '')
+        .regex_replace(r'(?m)^    group system system input$', '    group system input uhid')
+        .regex_replace(r'(?ms)\nservice (?:touch_report|touchsensor) [^\n]*\n.*?(?=\nservice |\Z)', ''),
     ('odm/etc/camera/enhance_motiontuning.xml',
      'odm/etc/camera/night_motiontuning.xml',
      'odm/etc/camera/motiontuning.xml'): blob_fixup()

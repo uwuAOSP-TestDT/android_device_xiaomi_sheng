@@ -853,7 +853,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
 
 # Camera sensors
-odm/lib64/camera/aon_front.pb
+odm/lib64/camera/aon_front.pb:vendor/lib64/camera/aon_front.pb
 odm/lib64/camera/com.qti.actuator.sheng_qtech_s5kjn1_gt9764_wide_actuator.so
 odm/lib64/camera/com.qti.eeprom.sheng_aac_ov32d40_p24c64e_front_eeprom.so
 odm/lib64/camera/com.qti.eeprom.sheng_qtech_s5kjn1_gt24p128e_wide_eeprom.so
@@ -966,9 +966,6 @@ system/usr/keylayout/uinput-fpc.kl
 odm/etc/Keyboard_Upgrade_0x01.bin
 odm/etc/Keyboard_Upgrade_0x01.bin
 odm/firmware/MCU_Upgrade.bin
-
-# perf
-vendor/lib64/liblearningmodule.so
 
 # QVR configs
 vendor/etc/qvr/cfg/519/0/65536/mtpkailua.txt
