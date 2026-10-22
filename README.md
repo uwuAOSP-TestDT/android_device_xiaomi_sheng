@@ -17,6 +17,23 @@
 | Front Camera            | 32 MP, f/2.2, (wide), 1/3.6", 0.61µm                                   |
 | Release Date            | February 2024                                                               |
 
+## Build dependencies
+
+Select these repositories and branches in the local manifest:
+
+| Path | Repository | Branch |
+| --- | --- | --- |
+| `device/xiaomi/sm8550-common` | [xiaomi-sm8550-devs/android_device_xiaomi_sm8550-common](https://github.com/xiaomi-sm8550-devs/android_device_xiaomi_sm8550-common) | `lineage-24.0` |
+| `hardware/xiaomi` | [UwUniverse/android_hardware_xiaomi](https://github.com/UwUniverse/android_hardware_xiaomi) | `lineage-24.0` |
+| `hardware/qcom-caf/sm8550/display` | [UwUniverse/android_hardware_qcom_display](https://github.com/UwUniverse/android_hardware_qcom_display) | `lineage-24.0-caf-sm8550` |
+
+Generate `vendor/xiaomi/sheng` with `extract-files.py` from the matching firmware.
+The prebuilt GKI, matching DTB/DTBO and kernel modules belong in
+`device/xiaomi/sheng-kernel`; keep `kernel.release` aligned with `system_dlkm`.
+The AOSP-compatible GKI build is available from
+[bk-kernel_5.15, ForAOSP](https://github.com/Jelly10086/bk-kernel_5.15/tree/ForAOSP).
+Vendor blobs and prebuilt kernel artifacts are not included in this source tree.
+
 ## Device Picture
 
 ![pad6sp](https://i02.appmifile.com/966_operator_sg/17/02/2024/d93754f43f5152e5d94407606f78d8ba.png)
