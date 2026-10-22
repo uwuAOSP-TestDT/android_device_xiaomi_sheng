@@ -1,0 +1,7 @@
+// SPDX-License-Identifier: Apache-2.0
+
+runtime_resource_overlay {
+    name: "Launcher3OverlaySheng",
+    sdk_version: "current",
+    vendor: true,
+}

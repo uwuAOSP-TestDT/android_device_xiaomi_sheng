@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworkResOverlaySheng \
+    Launcher3OverlaySheng \
     SettingsOverlaySheng \
     SettingsProviderResSheng \
     SystemUIOverlaySheng \

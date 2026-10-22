@@ -22,6 +22,10 @@
      entries do not follow the convention, but all new entries should. -->
      
 <resources>
+    <bool name="config_sf_slowBlur">false</bool>
+    <bool name="config_enableAppLaunchBlur">true</bool>
+    <bool name="config_enableBlurExpansion">true</bool>
+    <dimen name="config_letterboxBackgroundWallpaperBlurRadius">48dp</dimen>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting

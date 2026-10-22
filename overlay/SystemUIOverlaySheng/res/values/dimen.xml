@@ -18,4 +18,12 @@
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">1460px</dimen>
+
+    <dimen name="max_window_blur_radius">96px</dimen>
+    <dimen name="max_shade_window_blur_radius">64dp</dimen>
+    <dimen name="notification_background_blur_radius">40dp</dimen>
+    <dimen name="volume_dialog_background_blur_radius">40dp</dimen>
+    <dimen name="volume_dialog_background_surface_blur_radius">40dp</dimen>
+    <dimen name="global_actions_blur_radius">48dp</dimen>
+    <dimen name="bottomsheet_blur_radius">48dp</dimen>
 </resources>    

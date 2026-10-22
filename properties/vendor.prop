@@ -11,3 +11,6 @@ vendor.display.disable_cwb_idle_fallback=1
 
 # Keep the primary mixer clock sufficient across seamless mode switches.
 vendor.display.enable_scanout_clock_floor=1
+
+# Background blur is supported by the Adreno 740.
+ro.sf.blurs_are_expensive=0

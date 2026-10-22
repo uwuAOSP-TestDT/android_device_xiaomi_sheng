@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <dimen name="max_depth_blur_radius_enhanced">48dp</dimen>
+    <dimen name="folder_blur_radius">32dp</dimen>
+    <dimen name="popup_blur_radius">32dp</dimen>
+</resources>
