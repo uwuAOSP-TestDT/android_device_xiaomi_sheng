@@ -7,6 +7,10 @@
 # Inherit from xiaomi sm8550-common
 $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 
+# Use the kernel's predefined effects; sheng firmware has no Xiaomi effect-stream files.
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect)
+$(call soong_config_set_bool,qti_vibrator,use_effect_stream,false)
+
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sheng/sheng-vendor.mk)
 
@@ -27,7 +31,6 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworkResOverlaySheng \
-    NfcOverlaySheng \
     SettingsOverlaySheng \
     SettingsProviderResSheng \
     SystemUIOverlaySheng \
@@ -40,6 +43,9 @@ PRODUCT_PACKAGES += \
 # Permission
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/sheng_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sheng_hardware.xml
 
 # Peripheral Manager
 PRODUCT_PACKAGES += \
