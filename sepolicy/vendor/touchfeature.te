@@ -1,0 +1,62 @@
+type vendor_touchfeature, domain;
+typeattribute vendor_touchfeature halserverdomain;
+type vendor_touchfeature_exec, exec_type, vendor_file_type, file_type;
+type vendor_touchfeature_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_touchfeature_service, service_manager_type, hal_service_type;
+type vendor_touch_data_file, file_type, data_file_type;
+type vendor_proc_touch, fs_type, proc_type;
+type vendor_sysfs_palm_sensor, fs_type, sysfs_type;
+
+init_daemon_domain(vendor_touchfeature)
+hwbinder_use(vendor_touchfeature)
+binder_use(vendor_touchfeature)
+vndbinder_use(vendor_touchfeature)
+add_hwservice(vendor_touchfeature, vendor_touchfeature_hwservice)
+add_service(vendor_touchfeature, vendor_touchfeature_service)
+
+allow vendor_touchfeature self:global_capability_class_set sys_nice;
+allow vendor_touchfeature self:unix_stream_socket create_stream_socket_perms;
+allow vendor_touchfeature touchfeature_device:chr_file rw_file_perms;
+allow vendor_touchfeature uhid_device:chr_file rw_file_perms;
+allow vendor_touchfeature input_device:dir r_dir_perms;
+allow vendor_touchfeature input_device:chr_file rw_file_perms;
+allow vendor_touchfeature vendor_sysfs_touch:dir r_dir_perms;
+allow vendor_touchfeature vendor_sysfs_touch:file rw_file_perms;
+allow vendor_touchfeature vendor_sysfs_palm_sensor:file rw_file_perms;
+allow hal_sensors_default vendor_sysfs_palm_sensor:file rw_file_perms;
+allow vendor_touchfeature vendor_proc_touch:file r_file_perms;
+allow vendor_touchfeature vendor_touch_data_file:dir create_dir_perms;
+allow vendor_touchfeature vendor_touch_data_file:file create_file_perms;
+allow vendor_touchfeature vendor_hal_perf_hwservice:hwservice_manager find;
+allow vendor_touchfeature fwk_sensor_hwservice:hwservice_manager find;
+binder_call(vendor_touchfeature, vendor_hal_perf_default)
+binder_call(vendor_touchfeature, system_server)
+
+set_prop(vendor_touchfeature, vendor_touchfeature_prop)
+set_prop(vendor_touchfeature, vendor_touch_hostprocess_prop)
+
+allow hal_lineage_touch_default vendor_sysfs_touch:dir r_dir_perms;
+allow hal_lineage_touch_default vendor_sysfs_touch:file rw_file_perms;
+
+type vendor_touchevent, domain;
+type vendor_touchevent_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_touchevent)
+allow vendor_touchevent self:unix_stream_socket create_stream_socket_perms;
+allow vendor_touchevent input_device:dir r_dir_perms;
+allow vendor_touchevent input_device:chr_file rw_file_perms;
+allow vendor_touchevent touchfeature_device:chr_file rw_file_perms;
+allow vendor_touchevent vendor_sysfs_touch:dir r_dir_perms;
+allow vendor_touchevent vendor_sysfs_touch:file rw_file_perms;
+allow vendor_touchevent vendor_proc_touch:file r_file_perms;
+allow vendor_touchevent proc_interrupts:file r_file_perms;
+allow vendor_touchfeature vendor_touchevent:unix_stream_socket connectto;
+
+type vendor_touch_init_shell, domain;
+type vendor_touch_init_shell_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_touch_init_shell)
+allow vendor_touch_init_shell vendor_shell_exec:file { rx_file_perms entrypoint };
+allow vendor_touch_init_shell vendor_toolbox_exec:file rx_file_perms;
+allow vendor_touch_init_shell vendor_sysfs_touch:dir r_dir_perms;
+allow vendor_touch_init_shell vendor_sysfs_touch:file r_file_perms;
+set_prop(vendor_touch_init_shell, vendor_panel_info_prop)
+set_prop(vendor_touch_init_shell, vendor_touchfeature_prop)

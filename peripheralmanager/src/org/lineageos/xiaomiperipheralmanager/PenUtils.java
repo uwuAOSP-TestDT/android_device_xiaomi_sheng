@@ -31,12 +31,12 @@ public class PenUtils {
 
     private static void enablePenMode() {
         Log.d(TAG, "enablePenMode: Enable Pen Mode");
-        SystemProperties.set("persist.vendor.parts.pen", "18");
+        SystemProperties.set("persist.sys.sheng.pen_mode", "18");
     }
 
     private static void disablePenMode() {
         Log.d(TAG, "disablePenMode: Disable Pen Mode");
-        SystemProperties.set("persist.vendor.parts.pen", "0");
+        SystemProperties.set("persist.sys.sheng.pen_mode", "0");
     }
 
     private static void refreshPenMode() {

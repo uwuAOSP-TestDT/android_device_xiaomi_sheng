@@ -1,0 +1,6 @@
+;; This device-specific property has no equivalent in older vendor policy.
+(type new_objects)
+(typeattribute new_objects)
+(typeattributeset new_objects
+  (new_objects
+    sheng_pen_mode_prop))

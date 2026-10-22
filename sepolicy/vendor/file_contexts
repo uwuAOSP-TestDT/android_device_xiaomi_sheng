@@ -1,6 +1,12 @@
 # Pen
 /vendor/bin/xiaomi-pen               u:object_r:xiaomi_pen_exec:s0
 
+/odm/bin/hw/vendor\.xiaomi\.hw\.touchfeature@1\.0-service u:object_r:vendor_touchfeature_exec:s0
+/odm/bin/toucheventcheck u:object_r:vendor_touchevent_exec:s0
+/odm/etc/init\.panel_info\.sh u:object_r:vendor_touch_init_shell_exec:s0
+/data/vendor/touch(/.*)? u:object_r:vendor_touch_data_file:s0
+/dev/camlog u:object_r:vendor_camlog_device:s0
+
 # Sensors
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor.xiaomi.sensor.citsensorservice@1.1-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0

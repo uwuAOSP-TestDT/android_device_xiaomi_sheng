@@ -1,0 +1,5 @@
+hal_server_domain(hal_camera_default, hal_quickcamera)
+add_service(hal_camera_default, vendor_hal_aon_service)
+
+type vendor_camlog_device, dev_type;
+allow hal_camera_default vendor_camlog_device:chr_file rw_file_perms;

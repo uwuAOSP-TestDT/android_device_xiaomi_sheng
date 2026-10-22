@@ -1,0 +1,7 @@
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/touch u:object_r:vendor_sysfs_touch:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor u:object_r:vendor_sysfs_palm_sensor:s0
+genfscon proc /tp_fw_version u:object_r:vendor_proc_touch:s0
+genfscon proc /tp_lockdown_info u:object_r:vendor_proc_touch:s0
+genfscon sysfs /module/camera/parameters/ife_mqs_node1 u:object_r:vendor_sysfs_camera:s0
