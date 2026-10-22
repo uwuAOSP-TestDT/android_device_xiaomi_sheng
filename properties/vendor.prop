@@ -2,3 +2,12 @@
 persist.vendor.fingerprint.sensor_modules=fpc
 persist.vendor.fingerprint.sensor_location=0|965|115|local:44630947038039379843
 persist.vendor.fingerprint.type=side
+
+# Keep the layer mixer at the panel framebuffer size, as in the stock configuration.
+vendor.display.force_lm_to_fb_config=1
+
+# The stock writeback encoder fails the GKI clone check during idle fallback.
+vendor.display.disable_cwb_idle_fallback=1
+
+# Keep the primary mixer clock sufficient across seamless mode switches.
+vendor.display.enable_scanout_clock_floor=1
