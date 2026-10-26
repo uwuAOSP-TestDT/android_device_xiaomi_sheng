@@ -11,11 +11,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from sheng device
 $(call inherit-product, device/xiaomi/sheng/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+# Inherit from common uwuAOSP configuration
+UWU_DEVICE_TYPE := tablet
+UWU_SUPPORTS_TELEPHONY := false
+$(call inherit-product, vendor/uwu/config/common.mk)
 
 PRODUCT_DEVICE := sheng
-PRODUCT_NAME := lineage_sheng
+PRODUCT_NAME := uwu_sheng
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 24018RPACG
 PRODUCT_MANUFACTURER := Xiaomi
