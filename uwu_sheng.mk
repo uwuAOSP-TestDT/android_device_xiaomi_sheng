@@ -14,6 +14,7 @@ $(call inherit-product, device/xiaomi/sheng/device.mk)
 # Inherit from common uwuAOSP configuration
 UWU_DEVICE_TYPE := tablet
 UWU_SUPPORTS_TELEPHONY := false
+UWU_MAINTAINER := bk233
 $(call inherit-product, vendor/uwu/config/common.mk)
 
 PRODUCT_DEVICE := sheng
