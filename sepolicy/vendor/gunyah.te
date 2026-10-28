@@ -1,1 +1,4 @@
-typeattribute vendor_gunyah_chr_device vm_manager_device_type;
+allow crosvm_domain vendor_gunyah_chr_device:chr_file rw_file_perms;
+
+# GH_CREATE_VM opens a VM descriptor through /dev/gunyah.
+allowxperm crosvm_domain vendor_gunyah_chr_device:chr_file ioctl { 0x4700 };
