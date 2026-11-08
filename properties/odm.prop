@@ -1,6 +1,6 @@
 # Display
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 vendor.display.disable_3d_adaptive_tm=1
-persist.sys.miui_resolution=1440x3200
 
 # Touchfeature
 ro.vendor.touchfeature.type=43
