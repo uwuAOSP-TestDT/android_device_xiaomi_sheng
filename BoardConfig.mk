@@ -21,6 +21,7 @@ TARGET_OPT_IN_OSS_KERNEL := false
 
 # Use the CI-built GKI and firmware modules without invoking a kernel build.
 KERNEL_PATH := device/xiaomi/sheng-kernel
+TARGET_BOARD_KERNEL_HEADERS += $(KERNEL_PATH)/kernel-headers
 KERNEL_MODULES_RELEASE := $(strip $(shell cat $(KERNEL_PATH)/kernel.release))
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/kernel
