@@ -9,8 +9,9 @@ vendor.display.force_lm_to_fb_config=1
 # The stock writeback encoder fails the GKI clone check during idle fallback.
 vendor.display.disable_cwb_idle_fallback=1
 
-# Keep the primary mixer clock sufficient across seamless mode switches.
-vendor.display.enable_scanout_clock_floor=1
+# Keep mode selection in SurfaceFlinger, as in the stock display configuration.
+vendor.display.idle_time=0
+vendor.display.disable_metadata_dynamic_fps=1
 
 # Background blur is supported by the Adreno 740.
 ro.sf.blurs_are_expensive=0
