@@ -14,6 +14,8 @@ $(call soong_config_set_bool,qti_vibrator,use_effect_stream,false)
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sheng/sheng-vendor.mk)
 
+PRODUCT_CHARACTERISTICS := tablet
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_kalama_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml \
     $(LOCAL_PATH)/configs/audio/resourcemanager_kalama_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
